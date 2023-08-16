@@ -1,0 +1,82 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+.cards-container {
+    display: flex;
+    min-height: 95%;
+
+}
+
+figure {
+    width: 50px;
+    max-height: 646px;
+    border-radius: 40px;
+    border: 1px solid yellow;
+    cursor: pointer;
+   
+    overflow: hidden;
+    transition: width 1s ease;
+    position: relative;
+
+}
+
+figure img {   
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+figure:hover {
+    width: 200px;
+}
+h2 {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    opacity: 0;
+    
+}
+
+figure:hover h2 {
+    opacity: 1;
+    transition: 2s ease;
+}
+
+.cards-container figure:nth-child(n+3) {
+    display: none;
+}
+
+@media (min-width: 720px) {
+    .cards-container figure:nth-child(n+5) {
+        display: block;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .cards-container figure:nth-child(n+4) {
+        display: block;
+    }
+    figure:hover {
+        width: 400px;
+    }
+}
+@media(min-width: 1240px) {
+    .cards-container figure:nth-child(n+1) {
+        display: block;
+    }
+
+    figure:hover {
+        width: 600px;
+    }
+    figure {
+        width: 100px;
+    }
+}
